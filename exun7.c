@@ -3,13 +3,13 @@
 int main() {
     char sexo, olhos, cabelos;
     int idade;
-    float salario;
-    int total_habitantes = 0;
-    int mulheres_castanhas_castanhas = 0;
+    float salario, porcentagem;
+    int totalHabitantes = 0;
+    int mulheresCastanhas = 0;
 
     printf("Digite os dados dos habitantes (ou -1 para encerrar):\n");
 
-    while (1) {
+    while (idade != -1) {
         printf("Sexo (m/f): ");
         scanf(" %c", &sexo);
 
@@ -30,10 +30,10 @@ int main() {
                         scanf("%f", &salario);
 
                         if (salario >= 0) {
-                            total_habitantes++;
+                            totalHabitantes++;
 
                             if (sexo == 'f' && idade >= 18 && idade <= 35 && olhos == 'c' && cabelos == 'c') {
-                                mulheres_castanhas_castanhas++;
+                                mulheresCastanhas++;
                             }
                         } else {
                             printf("Salário não pode ser negativo. Tente novamente.\n");
@@ -54,8 +54,8 @@ int main() {
         }
     }
 
-    if (total_habitantes > 0) {
-        float porcentagem = (float)mulheres_castanhas_castanhas / total_habitantes * 100;
+    if (totalHabitantes > 0) {
+        porcentagem = (float)mulheresCastanhas / totalHabitantes * 100;
         printf("Porcentagem de mulheres com idade entre 18 e 35 anos, olhos castanhos e cabelos castanhos: %.2f%%\n", porcentagem);
     } else {
         printf("Nenhum habitante foi cadastrado.\n");
