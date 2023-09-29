@@ -1,17 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int soma = 0;
-    int numero = 2;
-    int contador = 0;
 
-    while (contador < 50) {
-        soma += numero;
-        numero += 2;
-        contador++;
-    }
+  int  qtd = 5, multiplo;
 
-    printf("%d\n", soma);
-
-    return 0;
+    for(int i = 1; i <= qtd; i++){
+    multiplo = i * 3;
+        printf("%d\n", multiplo);
+   
+}
+ return 0;
 }
